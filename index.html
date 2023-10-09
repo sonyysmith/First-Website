@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- !DOCTYPE html tells browser this is using HTML5 -->
+<!-- EXAMPLE CODE HEADER/DISCLAIMER
+ 
+Project:  Project1 Title Page
+Name: Emerson Smith
+Submitted: 8/26/2023
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+Reflection (1-2 paragraphs):  This project taught me how  to create a proper title page for a website. I learned how to run my code properly and through trial and error
+ I was able to create a project worth something looking at.
+ 
+-->
+<html>
+<head>
+<title>About Emerson Smith</title>
+<link rel= "stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="centerdiv">
+
+    <h1>Emerson Smith</h1> 
+        <img id="picture" class ="img-emerson" src="pictureweb.jpg" alt="Emerson Smith Selfie">
+        <h2>Personal Info</h2>
+        <li><strong>Major:</strong> Software Development</li>
+        <li><strong>High School:</strong> Murray High School, Graduated 2019</li>
+        <li><strong>Current year at UVU:</strong> 2nd year</li>
+        <li><strong>Favorite Ice Cream:</strong> Mint Chocolate Chip</li>
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="img-zoom" id="zoom">
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var modal = document.getElementById("imgModal");
+                var img = document.getElementById("picture");
+                var modalImg = document.getElementById("zoom");
+                
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+                var span = document.getElementsByClassName("close")[0];
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+    <h2>My Five Favorite Books</h2>
+        <p>1. <em>One Piece, </em> <a href="https://en.wikipedia.org/wiki/Eiichiro_Oda">Eiichiro Oda</a></p>
+        <p>2. <em>Chainsaw Man, </em><a href="https://www.simonandschuster.com/authors/Tatsuki-Fujimoto/2141437388">Tatsuki Fujimoto</a></p>
+        <p>3. <em>The Great Gatsby, </em><a href="https://en.wikipedia.org/wiki/F._Scott_Fitzgerald">F. Scott Fitzgerald</a></p>
+        <p>4. <em>Fire Punch, </em><a href="https://www.simonandschuster.com/authors/Tatsuki-Fujimoto/2141437388">Tatsuki Fujimoto</a></p>
+        <p>5. <em>Harry Potter and the Chamber of Secrets, </em><a href="https://www.jkrowling.com/">J.K. Rowling</a></p>
+
+    <h2>The Antisocial Cat</h2>
+        <p> In response to my speedy cat who refuses to hangout with me:</p>
+        <p> Runs away from me,</p>
+        <p> Too fast for me to catch him,</p>
+        <p> I need a new cat. </p>
+    
+    <h2>My personal interests</h2>
+        <p> A game I fell in love with and can talk about for hours is called Tales of Symphonia. This game is a foundation of my childhood and a big part of why my brothers and I are still as close as we've always been. The story is incredible and everytime I play it I learn something new about it.</p>
+        <p> I'm a big animal guy. I love every animal that is capable of loving me back and even those who are incapable(minus snakes). I spend a lot of my days hanging out with my dogs and just giving them all the love I can. Animals deserve the world.</p>
+        <p> Something else I love talking about are my friends. They are like family to me and I will do anything I can to help them out of a tough spot. I play video games almost every night with my friends and we talk about anything and everything. They've helped me through some tough times as well.</p>
+
+    <h2>Class Schedule</h2>
+    <table>
+        <tr>
+            <th></th>
+            <th class="header">Monday</th>
+            <th class="header">Tuesday</th>
+            <th class="header">Wednesday</th>
+            <th class="header">Thursday</th>
+            <th class="header">Friday</th>
+        </tr>
+        <tr>
+            <td>8:00 AM</td>
+            <td class="math" rowspan="3">Discrete Mathematics</td>
+            <td class="sleep" rowspan="6">Sleep in</td>
+            <td class="math" rowspan="3">Discrete Mathematics</td>
+            <td class="sleep" rowspan="6">Sleep in</td>
+            <td class="off" rowspan="16">Off Day to Catch up</td>
+        </tr>
+        <tr>
+            <td class="halfhour">8:30 AM</td>
+        </tr>
+        <tr>
+            <td>9:00 AM</td>
+        </tr>
+        <tr>
+            <td>9:30 AM</td>
+            <td class="offt" >Off</td>
+            <td class="offt" >Off</td>
+        </tr>
+        <tr>
+            <td>10:00 AM</td>
+            <td class="program" rowspan="4">C++ programming</td>
+            <td class="program" rowspan="4">C++ programming</td>
+        </tr>
+        <tr>
+            <td>10:30 AM</td>
+        </tr>
+        <tr>
+            <td>11:00 AM</td>
+            <td class="workout" rowspan="3">Personal Workout Time</td>
+            <td class="workout" rowspan="3">Personal Workout Time</td>
+        </tr>
+        <tr>
+            <td>11:30 AM</td>
+        </tr>
+        <tr>
+            <td>12:00 PM</td>
+            <td class="work" rowspan="8">Work</td>
+            <td class="work" rowspan="8">Work</td>
+        </tr>
+        <tr>
+            <td>12:30 PM</td>
+            <td class="offt" >Off</td>
+            <td class="offt" >Off</td>
+        </tr>
+        <tr>
+            <td>1:00 PM</td>
+            <td class="calculus" rowspan="4">Calculus</td>
+            <td class="calculus" rowspan="4">Calculus</td>
+        </tr>
+        <tr>
+            <td>1:30 PM</td>
+        </tr>
+        <tr>
+            <td>2:00 PM</td>
+        </tr>
+        <tr>
+            <td>2:30 PM</td>
+        </tr>
+        <tr>
+            <td>3:00 PM</td>
+            <td class="offt" >Off</td>
+            <td class="offt" >Off</td>
+        </tr>
+        <tr>
+            <td>3:30 PM</td>
+            <td class="offt" >Off</td>
+            <td class="offt" >Off</td>
+        </tr>
+        
+    </table>
+
+
+
+
+
+ 
+
+
+    </div>
+</body>
+</html>
